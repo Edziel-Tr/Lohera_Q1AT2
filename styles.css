@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Plain white background */
+}
+
+.test {
+    height: 10vh;
+    background-color: white; /* White box */
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    line-height: 10vh;
+    font-size: 2em;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 75vh;
+    margin: 2vw 0;
+}
+
+.art {
+    flex: 1 1 60%;
+    background-color: white; /* White box */
+    text-align: center;
+    border: 2px solid black;
+    margin: 0 1vw;
+    padding: 2vw;
+    color: black;
+}
+
+.aside1, .aside2 {
+    flex: 0 0 15vw;
+    background-color: white; /* White box */
+    text-align: center;
+    border: 2px solid black;
+    margin: 0 1vw;
+    padding: 2vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    color: black;
+}
+
+.foot {
+    height: 7vh;
+    background-color: white; /* White box */
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    line-height: 7vh;
+    font-size: 1.2em;
+    margin-top: 2vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .aside1, .aside2, .art {
+        flex: 1 1 100%;
+        min-width: unset;
+        margin: 2vw 0;
+        padding: 4vw 2vw;
+        height: auto;
+    }
+    .test, .foot {
+        height: auto;
+        line-height: normal;
+        font-size: 1.2em;
+        padding: 2vw 0;
+    }
+}

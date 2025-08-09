@@ -13,7 +13,7 @@ body {
 
 .test {
     height: 10vh;
-    background-color: white; /* White box */
+    background-color: white;
     color: black;
     text-align: center;
     border: 2px solid black;
@@ -22,41 +22,36 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 15vw 1fr 15vw;
+    grid-template-rows: auto;
+    gap: 1vw;
     min-height: 75vh;
     margin: 2vw 0;
 }
 
 .art {
-    flex: 1 1 60%;
-    background-color: white; /* White box */
+    background-color: white;
     text-align: center;
     border: 2px solid black;
-    margin: 0 1vw;
     padding: 2vw;
     color: black;
 }
 
 .aside1, .aside2 {
-    flex: 0 0 15vw;
-    background-color: white; /* White box */
+    background-color: white;
     text-align: center;
     border: 2px solid black;
-    margin: 0 1vw;
-    padding: 2vw 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 100px;
+    padding: 2vw 0;
     color: black;
 }
 
 .foot {
     height: 7vh;
-    background-color: white; /* White box */
+    background-color: white;
     color: black;
     text-align: center;
     border: 2px solid black;
@@ -67,13 +62,10 @@ body {
 
 @media screen and (max-width: 1000px) {
     .container {
-        flex-direction: column;
-        align-items: stretch;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
     .aside1, .aside2, .art {
-        flex: 1 1 100%;
-        min-width: unset;
-        margin: 2vw 0;
         padding: 4vw 2vw;
         height: auto;
     }
